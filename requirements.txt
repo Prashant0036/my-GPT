@@ -1,0 +1,4 @@
+streamlit
+dotenv
+langchain_groq
+os
