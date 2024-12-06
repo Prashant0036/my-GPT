@@ -8,7 +8,7 @@ def get_response(prompt):
 
 def handle_response():
     # Combine prompt with additional information if needed
-    new_prompt = f"Only use this info if needed. Info is: {my_info}. User prompt is: {st.session_state['prompt']}"
+    new_prompt = f"I'm giving you a prompt, which have two parts. first part contains my personal info and second part is a prompt entered by another user. Only use this info if something related to it asked by user other wise don't reveal that first part of prompt. Info is: {my_info}. User's prompt is: {st.session_state['prompt']}"
     
     st.session_state['response'] = get_response(new_prompt)
 
